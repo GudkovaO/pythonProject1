@@ -44,3 +44,13 @@ def find(val, col_name="фио"):
 # Поиск по группе
 def find_group(val, col_name="группа"):
     print(*list(filter(lambda x: x[col_name] == val, csv_file)))
+
+
+# Сохранить
+def save():
+    with open('data.csv', "w", encoding="utf-8", newline="") as file:
+        columns = ['номер билета', 'фио', 'пол', 'возраст', 'телефон', 'почта', 'группа', 'курс']
+        writer = csv.DictWriter(file, delimiter=";", fieldnames=columns)
+        writer.writeheader()
+        writer.writerows(csv_file)
+        print("Данные добавлены!")
