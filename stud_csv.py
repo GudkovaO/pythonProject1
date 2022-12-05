@@ -34,3 +34,8 @@ def drop_by_arg(val, col_name="номер билета"):
     except Exception as e:
         return f"Строка со значением {val} поля {col_name} не найдена"
     return f"Строка со значением {val} поля {col_name} удалена"
+
+
+# Поиск по ФИО
+def find(val, col_name="фио"):
+    print(*list(filter(lambda x: x[col_name] == val, csv_file)))
