@@ -26,3 +26,6 @@ while True:
 
     elif action == 'exit':
         break
+ elif action == '2':
+        insert(input('Номер билета: '), input('ФИО: '), input('Пол: '), input('Возраст: '), input('Телефон: '),
+               input('Почта: '), input('Группа: '), input('Курс: '))
