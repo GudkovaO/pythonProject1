@@ -16,3 +16,13 @@ MENU = {
     '0': '<- Меню',
     'exit': 'Выход'
 }
+for k, v in MENU.items():
+    print(k, '-', v)
+
+while True:
+    action = input('>_')
+    if action == '1':
+        file_open(FILENAME)
+
+    elif action == 'exit':
+        break
