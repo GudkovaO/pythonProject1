@@ -39,3 +39,8 @@ def drop_by_arg(val, col_name="номер билета"):
 # Поиск по ФИО
 def find(val, col_name="фио"):
     print(*list(filter(lambda x: x[col_name] == val, csv_file)))
+
+
+# Поиск по группе
+def find_group(val, col_name="группа"):
+    print(*list(filter(lambda x: x[col_name] == val, csv_file)))
